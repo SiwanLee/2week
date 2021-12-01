@@ -1,0 +1,25 @@
+C++ string 클래스 멤버함수 정리
+Ex)
+string str1 = "Junghwa";
+string st2 = "Siwan";
+
+1) str1.at(Index) : index에는 숫자가 들어가게되고, 해당 위치(n)에 해당하는 문자를 반환합니다.
+                      (index 는 0부터 시작합니다. / index가 string 범위를 벗어나게 되면 예외를 뱉는다.)
+
+2) str1.operator[index] : C++ string은 일반 배열처럼 대괄호를 이용해서 string 인자에 접근할 수 있습니다.
+                               인덱스의 범위를 검사하지 않기 때문에 빠르지만 예외를 뱉어내지 않습니다.
+
+3) str.size(); : string의 사이즈를 반환합니다. (ex. str1.size(): = 7반환)
+
+4) str.length(); : size 함수와 동일하고 string의 길이를 반환합니다.
+
+5) str.capacity(); : string 객체에 할당된 메모리 크기(bytes)를 반환합니다.
+                      (string 길이가 증가할 수 있기 떄문에, 메모리 할당을 size에 대비해서 여유롭게 한다)
+
+6) str1.resize(n) : string을 n만큼의 크기로 만듭니다. 만약 그 크기가 원래 사이즈보다 작다면, 남은 스트링을 버립니다.
+                      만약 그 크기가 원래 사이즈보다 크다면, 빈 공간으로 남은 공간을 채웁니다.
+                      (ex. str1.resize(5) // "BlockDMask" -> "Block" 출력)
+                      (ex. str1.resize(6) // "Block" -> Block 출력)
+                      (ex. str1.resize(10, 'a') // "Block" -> Block aaaa출력)
+
+참고 홈페이지 : https://blockdmask.tistory.com/338
