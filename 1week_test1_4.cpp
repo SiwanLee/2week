@@ -10,7 +10,7 @@ int main(void)
 	int val[10];
 	//val[1] = 1;
 	int *ptr;   //포인터 변수 ptr 선언
-	ptr = &val[0]; //포인터 변수 ptr에 value의 메모리 값으로 초기화한다.
+	ptr = &val[0]; 
 	// 포인터 변수는 데이터 값이 아니라 메모리 값을 참조하여 넣는다.
 
 	//std::cout << val << std::endl; //변수가 가지고 있는 데이터 값
@@ -19,7 +19,7 @@ int main(void)
 	//std::cout << ptr << std::endl; //val에게 할당해준 메모리 주소값
 	//std::cout << &ptr << std::endl;
 
-	for (int i = 0; i < 10; i++) {  //부장님 피연산자 형식이 호환되지 않는다는 말이 뭔지 모르겠습니다 ㅠㅠ
+	for (int i = 0; i < 10; i++) {  
 		//ptr = &val[i];
 		val[i] = i+1;
 		std::cout << *(ptr+i) << std::endl;
